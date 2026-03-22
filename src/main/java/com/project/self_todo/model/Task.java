@@ -1,4 +1,4 @@
-package com.project.self_todo.com.project.self_todo.model;
+package com.project.self_todo.model;
 
 import jakarta.persistence.*;
 

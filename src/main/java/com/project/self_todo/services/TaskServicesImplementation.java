@@ -1,7 +1,7 @@
-package com.project.self_todo.com.project.self_todo.com.project.self_todo.services;
+package com.project.self_todo.services;
 
-import com.project.self_todo.com.project.self_todo.model.Task;
-import com.project.self_todo.com.project.self_todo.repository.TaskRepository;
+import com.project.self_todo.model.Task;
+import com.project.self_todo.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -18,8 +18,7 @@ public class TaskServicesImplementation implements TaskServices{
 
     @Override
     public Task createTask(Task task) {
-        taskRepository.save(task);
-        return task;
+        return taskRepository.save(task);
     }
 
     @Override

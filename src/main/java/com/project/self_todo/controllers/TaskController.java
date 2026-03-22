@@ -1,7 +1,8 @@
-package com.project.self_todo.com.project.self_todo.com.project.self_todo.controllers;
+package com.project.self_todo.controllers;
 
-import com.project.self_todo.com.project.self_todo.com.project.self_todo.services.TaskServicesImplementation;
-import com.project.self_todo.com.project.self_todo.model.Task;
+import com.project.self_todo.services.TaskServices;
+import com.project.self_todo.services.TaskServicesImplementation;
+import com.project.self_todo.model.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +13,11 @@ import java.util.List;
 @RestController
 public class TaskController {
     @Autowired
-    TaskServicesImplementation taskService;
+    TaskServices taskService;
 
     @PostMapping("/api/public/task")
     public ResponseEntity<Task> createTask(@RequestBody Task task){
-        return new ResponseEntity<> (taskService.createTask(task), HttpStatus.OK);
+        return new ResponseEntity<> (taskService.createTask(task), HttpStatus.CREATED);
     }
 
     @GetMapping("/api/public/task")

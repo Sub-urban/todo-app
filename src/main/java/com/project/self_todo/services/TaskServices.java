@@ -1,6 +1,6 @@
-package com.project.self_todo.com.project.self_todo.com.project.self_todo.services;
+package com.project.self_todo.services;
 
-import com.project.self_todo.com.project.self_todo.model.Task;
+import com.project.self_todo.model.Task;
 
 import java.util.List;
 
